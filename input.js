@@ -36,6 +36,10 @@ const handleUserInput = function (key, conn) {
     conn.write("Move: down")
   } else if (key === 'd') {
     conn.write("Move: right")
+  } else if (key === 'i') {
+    conn.write("Say: hellloo")
+  } else if (key === 'l'){
+    conn.write("Say: Cool.")
   }
 }
 
