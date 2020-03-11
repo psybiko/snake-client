@@ -15,7 +15,15 @@ const connect = function() {
 
   conn.on('connect', () => {
     console.log("Successfully connected to game server");
-    conn.write('Name: KC')
+    conn.write('Name: KC');
+    // Supported move commands
+    // Snakes cannot instantly make a 180 turn by moving in the opposite direction
+    // conn.write("Move: up");
+    // conn.write("Move: down");
+    // conn.write("Move: left");
+    // conn.write("Move: right");
+
+
   })
 
   return conn;
