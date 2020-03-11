@@ -1,3 +1,5 @@
+const {MOVE_UP_KEY, MOVE_LEFT_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY} = require('./constants')
+
 // Stores the active TCP connection object.
 // Set in global scope to be used by other functions
 let connection;
@@ -29,13 +31,13 @@ const handleUserInput = function (key, conn) {
   // Supported move commands
     // Snakes cannot instantly make a 180 turn by moving in the opposite direction
   if (key === 'w') {
-    conn.write("Move: up")
+    conn.write(MOVE_UP_KEY)
   } else if (key === 'a') {
-    conn.write("Move: left")
+    conn.write(MOVE_LEFT_KEY)
   } else if (key === 's'){
-    conn.write("Move: down")
+    conn.write(MOVE_DOWN_KEY)
   } else if (key === 'd') {
-    conn.write("Move: right")
+    conn.write(MOVE_RIGHT_KEY)
   } else if (key === 'i') {
     conn.write("Say: hellloo")
   } else if (key === 'l'){
