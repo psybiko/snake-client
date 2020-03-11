@@ -17,9 +17,7 @@ const setupInput = function () {
   stdin.setEncoding('utf8');
   stdin.resume();
   stdin.on('data', (key) => {
-    if (key === '\u0003') {
-      process.exit();
-    }
+    handleUserInput(key)
   })
   return stdin;
 }
@@ -28,5 +26,8 @@ const setupInput = function () {
  *Handle user input
  * This allows us to terminate the app easily using ctrl + c
  */
-const handleUserInput = function () {
+const handleUserInput = function (data) {
+  if (key === '\u0003') {
+    process.exit();
+  }
 }
